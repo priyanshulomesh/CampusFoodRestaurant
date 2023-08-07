@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/otp_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha="0.5"
+            android:fontFamily="sans-serif-black"
+            android:paddingLeft="15sp"
+            android:text="ENTER OTP"
+            android:textColor="#000000"
+            android:textSize="40sp" />
+
+        <com.chaos.view.PinView
+            android:id="@+id/otpBox"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:cursorVisible="true"
+            android:gravity="center"
+            android:hint="OTP"
+            android:inputType="number"
+            android:textColor="#000000"
+            app:hideLineWhenFilled="false"
+            app:itemCount="6"
+            app:itemHeight="50dp"
+            app:itemRadius="10dp"
+            app:itemWidth="50dp"
+            app:lineColor="#FBC02D"></com.chaos.view.PinView>
+
+        <!--        Resend-->
+        <Button
+            android:id="@+id/resend_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Resend"
+            android:layout_gravity="center"
+            android:textColor="@color/theme"
+            android:backgroundTint="@color/white"/>
+
+        <!--Verify-->
+        <Button
+            android:id="@+id/verify_otp"
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/theme"
+            android:layout_gravity="center"
+            android:text="Verify" />
+
+        <ProgressBar
+            android:id="@+id/otp_progres_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:outlineAmbientShadowColor="@color/theme"
+            android:outlineSpotShadowColor="@color/theme"/>
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
